@@ -1,0 +1,9 @@
+{
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
