@@ -32,7 +32,10 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script src="/theme.js" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

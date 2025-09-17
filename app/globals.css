@@ -1,14 +1,25 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light mode */
+  --background-color: hsl(0 0% 95%);
+  --background-end: hsl(0 0% 85%);
+  --text-color: hsl(216, 63%, 4%);
+  --background-card: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
+.dark {
+  /* Dark mode (default) */
+  --background-color: hsl(216, 63%, 4%);
+  --background-end: hsl(216, 63%, 10%);
+  --text-color: #fff;
+  --background-card: hsl(216 60% 6%);
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -17,11 +28,15 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* color: var(--foreground); */
+  color: var(--text-color);
+  background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 * {
@@ -33,10 +48,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
