@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 const PORTFOLIO_THEME = 'portfolio-theme';
-
 type THEME_VARIANT = 'light' | 'dark';
 
 interface UseThemeProps {

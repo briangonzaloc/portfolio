@@ -9,5 +9,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|img|api|favicon.ico|fonts|theme).*)', '/', '/(es|en|pt)/:path*', '/(es|en|pt)/robots.txt'],
+  matcher: ['/((?!_next|img|api|favicon.ico|fonts).*)', '/', '/(es|en|pt)/:path*', '/(es|en|pt)/robots.txt'],
 };
